@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assignment Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        #err_no_1 {
+            display: none;
+            text-align: -webkit-center;
+        }
+        
+        #err_no_2 {
+            display: none;
+            text-align: -webkit-center;
+        }
+        
+        #err_no_3 {
+            display: none;
+            text-align: -webkit-center;
+        }
+        
+        #err_no_4 {
+            display: none;
+            text-align: -webkit-center;
+        }
+        
+        .display_block {
+            display: block !important;
+        }
+    </style>
+
+</head>
+
+
+<body class="text-center" rw4gci="true" data-new-gr-c-s-check-loaded="14.1065.0" data-gr-ext-installed="">
+
+    <div class="shadow p-3 mb-5 bg-body rounded">
+        <div class="d-inline-flex p-2">
+
+            <main class="form-signin w-100 m-auto">
+                <form   action="next_page.html" method="get" id="formid" >
+
+                    <img class="mb-4 rounded shadow bg-body rounded-circle" src="logo.jpg" alt="" width="72" height="57">
+
+                    <h1 class="h3 mb-3 fw-normal">Student Form (BsIT)</h1>
+
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="name" placeholder="name" required>
+                                <label for="name">Name</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="fname" placeholder="Enter Father Name" required>
+                                <label for="fname">Father Name</label>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="form-floating">
+                                <input type="tel" class="form-control" name="phone" placeholder="Enter Father Name" required>
+                                <label for="phone">Phone</label>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="iname" placeholder="Enter Institution Name" required>
+                                <label for="iname">Institution Name</label>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <div class="form-floating">
+                                <select class="form-select" name="floatingSelectGrid" >
+                  <option selected>2nd Sem</option>
+                  <option selected>4th Sem</option>
+                  <option selected>6th Sem</option>
+                </select>
+                                <label for="floatingSelectGrid">Select Semester</label>
+                            </div>
+                        </div>
+                        <div id="result_info_di">
+                            <h1 class="h3 mb-3 fw-normal">Result Info</h1>
+                        </div>
+                        <div id="err_no_1">
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <div>
+                                    Logical Error(Obtained>Total)
+                                </div>
+                              </div>
+                        </div>
+
+                        <div class="my-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="1_name" placeholder="Enter Subject Name">
+                                <label for="1_name">Subject 1 Name</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="1" id="1_total" name="1_total" placeholder="Total Marks">
+                                <label for="1_total">Total Marks</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="1" id="1_obtained" name="1_obtained" placeholder="Enter Marks Obtained">
+                                <label for="1_obtained">Marks Obtained</label>
+                            </div>
+                        </div>
+
+                        <div id="err_no_2">
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <div>
+                                    Logical Error(Obtained>Total)
+                                </div>
+                              </div>
+                        </div>
+                        <div class="my-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="2_name" placeholder="Enter Subject Name">
+                                <label for="2_name">Subject 2 Name</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="2" id="2_total" name="2_total" placeholder="Total Marks">
+                                <label for="2_total">Total Marks</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="2" id="2_obtained" name="2_obtained" placeholder="Enter Marks Obtained">
+                                <label for="2_obtained">Marks Obtained</label>
+                            </div>
+                        </div>
+
+                        <div id="err_no_3">
+                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                  <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                                <div>
+                                    Logical Error(Obtained>Total)
+                                </div>
+                              </div>
+                        </div>
+                        <div class="my-2">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" name="3_name" placeholder="Enter Subject Name">
+                                <label for="3_name">Subject 3 Name</label>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="3" id="3_total" name="3_total" placeholder="Total Marks">
+                                <label for="3_total">Total Marks</label>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" onkeyup="validation(this)" data-id="3" id="3_obtained" name="3_obtained" placeholder="Enter Marks Obtained">
+                                <label for="3_obtained">Marks Obtained</label>
+                            </div>
+                        </div>
+
+
+                        <button class="w-100 btn btn-lg btn-primary mt-2" type="button" id="submit_button" onclick="beforeSubmit()">Submit</button>
+                    </div>
+                </form>
+
+                <script>
+                    function beforeSubmit() {
+
+                        error = false;
+
+                        for (let i = 1; i < 4; i++) {
+                            var total = document.getElementById(`${i}_total`).value;
+                            var Obtained = document.getElementById(`${i}_obtained`).value;
+
+                            if (parseInt(Obtained) > parseInt(total)) {
+                                error = true;
+                            }
+                        }
+
+                        // var element = document.getElementById('name').value;
+                        // if (element == '') {
+                        //     error = true;
+                        // }
+                        // element = document.getElementById('fname').value;
+                        // if (element == '') {
+                        //     error = true;
+                        // }
+                        // element = document.getElementById('phone').value;
+                        // if (element == '') {
+                        //     error = true;
+                        // }
+                        // element = document.getElementById('iname').value;
+                        // if (element == '') {
+                        //     error = true;
+                        // }
+                        // element = document.getElementById('floatingSelectGrid').value;
+                        // if (element == '') {
+                        //     error = true;
+                        // }
+
+                        if (error) {
+                            //Nothing Happens
+                            //Form will not be submitted
+                        } else {
+                            //No Error
+                            //Form Submit
+                            document.getElementById('formid').submit();
+                        }
+                    }
+                </script>
+
+
+
+                <script>
+                    function validation(arg) {
+                        // console.log(arg.getAttribute('data-id'));
+
+                        var This_id = arg.getAttribute('data-id');
+
+                        if (This_id == 1) {
+                            var total = document.getElementById('1_total').value;
+                            var Obtained = document.getElementById('1_obtained').value;
+                            var error = document.getElementById('err_no_1');
+                            if (parseInt(Obtained) > parseInt(total)) {
+                                error.classList.add('display_block');
+                            } else {
+                                error.classList.remove('display_block');
+                            }
+                        }
+                        if (This_id == 2) {
+                            var total = document.getElementById('2_total').value;
+                            var Obtained = document.getElementById('2_obtained').value;
+                            var error = document.getElementById('err_no_2');
+                            if (parseInt(Obtained) > parseInt(total)) {
+                                error.classList.add('display_block');
+                            } else {
+                                error.classList.remove('display_block');
+                            }
+                        }
+                        if (This_id == 3) {
+                            var total = document.getElementById('3_total').value;
+                            var Obtained = document.getElementById('3_obtained').value;
+                            var error = document.getElementById('err_no_3');
+                            if (parseInt(Obtained) > parseInt(total)) {
+                                error.classList.add('display_block');
+                            } else {
+                                error.classList.remove('display_block');
+                            }
+                        }
+                    }
+                </script>
+
+            </main>
+
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>
